@@ -1,9 +1,9 @@
 #!/bin/bash
 
 NOW=$(date +"%d-%m-%Y_%H-%M")
-DIR=/home/user_name/mongo-backup/$NOW
+DIR=/home/$(whoami)/mongo-backup/$NOW
 SERVER=user@ip
-REMOTE_DIR=/home/user_name/backup_servers/app_name
+REMOTE_DIR=/home/$(whoami)/backup_servers/app_name
 MONGO_SERVER=localhost
 MONGO_PORT=27017
 

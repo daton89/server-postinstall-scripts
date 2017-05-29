@@ -10,4 +10,4 @@ MONGO_PORT=27017
 mkdir $DIR
 mongodump --host $MONGO_SERVER --port $MONGO_PORT --out $DIR
 ssh $SERVER "mkdir -p $REMOTE_DIR/mongodump"
-scp -r -C $DIR $SERVER:$REMOTE_DIR/mongodump/
+rsync -h -v -r -P -t $DIR $SERVER:$REMOTE_DIR/mongodump

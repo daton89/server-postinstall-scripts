@@ -6,3 +6,4 @@ sudo apt-get install -y nodejs
 
 sudo apt-get install -y build-essential
 
+sudo npm i -g pm2 

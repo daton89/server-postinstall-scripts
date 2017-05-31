@@ -1,3 +1,5 @@
 #!/bin/bash
 
-script -ca ./script.sh output.log
+sudo chmod +x ./script.sh
+
+./script.sh >> script_output.log

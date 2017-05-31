@@ -1,6 +1,5 @@
 # server-postinstall-scripts
 
-### basic usage 
+### launch all scripts
 
-`sudo chmod +x initialize.sh`
-`./initialize.sh`
+`sudo chmod +x initialize.sh && ./initialize.sh`

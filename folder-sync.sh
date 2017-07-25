@@ -1,11 +1,11 @@
 #!/bin/bash
 
-NOW=$(date +"%d-%m-%Y_%H-%M")
-DIR=/mnt/vdb1/uploads
-SERVER=user@ip
-REMOTE_DIR=/home/user_name/backup_servers/app_name
+NOW=$(date +"%d-%m-%Y_%H-%M") # 19-07-2017_10-55
+DIR=/mnt/vdb1/uploads # local folder to sync with remote 
+REMOTE_DIR=/home/user_name/backup_servers/app_name # remote folder to sync with local
+SERVER=user@ip # remote server 
 
-ssh $SERVER "mkdir -p $REMOTE_DIR/uploads"
+ssh $SERVER "mkdir -p $REMOTE_DIR/uploads" # create remote folder if it doesn't exists
 
 # rsync options: 
 # -h output numbers in a human-readable format

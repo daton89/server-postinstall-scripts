@@ -1,13 +1,9 @@
 #!/bin/bash
 
-NOW=$(date +"%d-%m-%Y_%H-%M")
+NOW=$(date +"%d-%m-%Y_%H-%M") # 19-07-2017_10-55
 DIR=/home/$(whoami)/mongo-backup/$NOW
-SERVER=user@ip
-REMOTE_DIR=/home/$(whoami)/backup_servers/app_name
 MONGO_SERVER=localhost
 MONGO_PORT=27017
 
-mkdir $DIR
+mkdir -p $DIR
 mongodump --host $MONGO_SERVER --port $MONGO_PORT --out $DIR
-ssh $SERVER "mkdir -p $REMOTE_DIR/mongodump"
-rsync -h -v -r -P -t $DIR $SERVER:$REMOTE_DIR/mongodump
